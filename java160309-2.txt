@@ -1,0 +1,272 @@
+P400@G416-12 MINGW32 ~
+$ cd ~
+
+P400@G416-12 MINGW32 ~
+$ cd Documents/kjy/Code/j16/myrepo
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Cod                                         e/j16/myrepo (master)
+$ ls src/
+HelloWorld.java
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ ls -l
+total 1
+drwxr-xr-x 1 P400 197121 0 3ߴ   9 16:23 classes/
+drwxr-xr-x 1 P400 197121 0 3ߴ   9 16:29 doc/
+drwxr-xr-x 1 P400 197121 0 3ߴ   9 16:51 lib/
+drwxr-xr-x 1 P400 197121 0 3ߴ   9 16:29 model/
+-rw-r--r-- 1 P400 197121 8 3ߴ   9 16:22 README.md
+drwxr-xr-x 1 P400 197121 0 3ߴ   9 17:14 src/
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ cat src/HelloWorld.java
+public class HelloWorld {
+  public static void main(String[] args){
+    System.out.println("Hello World"):
+  }
+}
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ javac
+Usage: javac <options> <source files>
+where possible options include:
+  -g                         Generate all debugging info
+  -g:none                    Generate no debugging info
+  -g:{lines,vars,source}     Generate only some debugging info
+  -nowarn                    Generate no warnings
+  -verbose                   Output messages about what the compiler is doing
+  -deprecation               Output source locations where deprecated APIs are used
+  -classpath <path>          Specify where to find user class files and annotation processors
+  -cp <path>                 Specify where to find user class files and annotation processors
+  -sourcepath <path>         Specify where to find input source files
+  -bootclasspath <path>      Override location of bootstrap class files
+  -extdirs <dirs>            Override location of installed extensions
+  -endorseddirs <dirs>       Override location of endorsed standards path
+  -proc:{none,only}          Control whether annotation processing and/or compilation is done.
+  -processor <class1>[,<class2>,<class3>...] Names of the annotation processors to run; bypasses default discovery process
+  -processorpath <path>      Specify where to find annotation processors
+  -d <directory>             Specify where to place generated class files
+  -s <directory>             Specify where to place generated source files
+  -implicit:{none,class}     Specify whether or not to generate class files for implicitly referenced files
+  -encoding <encoding>       Specify character encoding used by source files
+  -source <release>          Provide source compatibility with specified release
+  -target <release>          Generate class files for specific VM version
+  -version                   Version information
+  -help                      Print a synopsis of standard options
+  -Akey[=value]              Options to pass to annotation processors
+  -X                         Print a synopsis of nonstandard options
+  -J<flag>                   Pass <flag> directly to the runtime system
+  -Werror                    Terminate compilation if warnings occur
+  @<filename>                Read options and filenames from file
+
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ javac -d classes/ -sourcepath src/ src/HelloWorld.java
+src\HelloWorld.java:3: error: ';' expected
+    System.out.println("Hello World"):
+                                     ^
+1 error
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ javac -d classes/ -sourcepath src/ src/HelloWorld.java
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ ls classes/
+HelloWorld.class
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ java classes/HelloWorld.class
+????: ?? ????? classes.HelloWorld.class??(??) a??? ?��??? ?? ???????.
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ java HelloWorld.class
+????: ?? ????? HelloWorld.class??(??) a??? ?��??? ?? ???????.
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ java HelloWorld
+????: ?? ????? HelloWorld??(??) a??? ?��??? ?? ???????.
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ java -cp ./classes/ HelloWorld
+Hello World
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ ls src/
+com/  HelloWorld.java  HelloWorld.java~
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ ls src/com/sd/HelloWorld.java
+src/com/sd/HelloWorld.java
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ pwd
+/c/Users/P400/Documents/kjy/Code/j16/myrepo
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ ls -l
+total 1
+drwxr-xr-x 1 P400 197121 0 3ߴ   9 17:22 classes/
+drwxr-xr-x 1 P400 197121 0 3ߴ   9 16:29 doc/
+drwxr-xr-x 1 P400 197121 0 3ߴ   9 16:51 lib/
+drwxr-xr-x 1 P400 197121 0 3ߴ   9 16:29 model/
+-rw-r--r-- 1 P400 197121 8 3ߴ   9 16:22 README.md
+drwxr-xr-x 1 P400 197121 0 3ߴ   9 17:28 src/
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ javac -d ./classes/ -sourcepath src/ src/com/sd/HelloWorld.java
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ ls classes/
+com/  HelloWorld.class
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ ls classes/com/sd/
+HelloWorld.class
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ java -cp classes/ com.sc.HelloWorld
+????: ?? ????? com.sc.HelloWorld??(??) a??? ?��??? ?? ???????.
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ java -cp classes/ com.sd.HelloWorld
+Hello World
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ ls -l
+total 1
+drwxr-xr-x 1 P400 197121 0 3ߴ   9 17:31 classes/
+drwxr-xr-x 1 P400 197121 0 3ߴ   9 16:29 doc/
+drwxr-xr-x 1 P400 197121 0 3ߴ   9 16:51 lib/
+drwxr-xr-x 1 P400 197121 0 3ߴ   9 16:29 model/
+-rw-r--r-- 1 P400 197121 8 3ߴ   9 16:22 README.md
+drwxr-xr-x 1 P400 197121 0 3ߴ   9 17:28 src/
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ mv ~/D
+Desktop/   Documents/ Downloads/
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ mv ~/Downloads/aplujar5/aplu5.jar ./lib/
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ ls lib
+aplu5.jar  drjava-stable-20140826-r5761.jar
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ ls lib/
+aplu5.jar  drjava-stable-20140826-r5761.jar
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ javac -d ./classes/ -sourcepath src/ src/com/sd/turtle/TurtleDemoMain.java
+src\com\sd\turtle\TurtleDemoMain.java:7: error: package ch.aplu.turtle does not exist
+import ch.aplu.turtle.*;
+^
+src\com\sd\turtle\TurtleDemoMain.java:10: error: cannot find symbol
+  Turtle t1 = new Turtle();
+  ^
+  symbol:   class Turtle
+  location: class TurtleDemoMain
+src\com\sd\turtle\TurtleDemoMain.java:10: error: cannot find symbol
+  Turtle t1 = new Turtle();
+                  ^
+  symbol:   class Turtle
+  location: class TurtleDemoMain
+3 errors
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ javac -d classes/ -cp classes/:lib/aplu5.jar -sourcepath src/ src/com/sd/turtle/TurtleDemoMain.java
+src\com\sd\turtle\TurtleDemoMain.java:7: error: package ch.aplu.turtle does not exist
+import ch.aplu.turtle.*;
+^
+src\com\sd\turtle\TurtleDemoMain.java:10: error: cannot find symbol
+  Turtle t1 = new Turtle();
+  ^
+  symbol:   class Turtle
+  location: class TurtleDemoMain
+src\com\sd\turtle\TurtleDemoMain.java:10: error: cannot find symbol
+  Turtle t1 = new Turtle();
+                  ^
+  symbol:   class Turtle
+  location: class TurtleDemoMain
+3 errors
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ javac -d classes/ -cp lib/aplu5.jar -sourcepath src/ src/com/sd/turtle/TurtleDemoMain.java
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ java -classpath classes/:lib/aplu5.jar com.sd.turtle.TurtleDemoMain
+????: ?? ????? com.sd.turtle.TurtleDemoMain??(??) a??? ?��??? ?? ???????.
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ ^C
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ ls -la
+total 10
+drwxr-xr-x 1 P400 197121   0 3ߴ   9 16:44 ./
+drwxr-xr-x 1 P400 197121   0 3ߴ   9 16:26 ../
+drwxr-xr-x 1 P400 197121   0 3ߴ   9 16:38 .git/
+-rw-r--r-- 1 P400 197121 196 3ߴ   9 16:43 .gitignore
+drwxr-xr-x 1 P400 197121   0 3ߴ   9 17:31 classes/
+drwxr-xr-x 1 P400 197121   0 3ߴ   9 16:29 doc/
+drwxr-xr-x 1 P400 197121   0 3ߴ   9 17:41 lib/
+drwxr-xr-x 1 P400 197121   0 3ߴ   9 16:29 model/
+-rw-r--r-- 1 P400 197121   8 3ߴ   9 16:22 README.md
+drwxr-xr-x 1 P400 197121   0 3ߴ   9 17:28 src/
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        src/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ git add .gitignore
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ git add src/
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   .gitignore
+        new file:   src/HelloWorld.java
+        new file:   src/HelloWorld.java~
+        new file:   src/com/sd/HelloWorld.java
+        new file:   src/com/sd/turtle/HelloWorld.java
+        new file:   src/com/sd/turtle/TurtleDemoMain.java
+
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ git commit -am "wk1 at uni"
+[master 7faf1d5] wk1 at uni
+ 6 files changed, 73 insertions(+), 3 deletions(-)
+ create mode 100644 src/HelloWorld.java
+ create mode 100644 src/HelloWorld.java~
+ create mode 100644 src/com/sd/HelloWorld.java
+ create mode 100644 src/com/sd/turtle/HelloWorld.java
+ create mode 100644 src/com/sd/turtle/TurtleDemoMain.java
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ git push origin master
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (11/11), 1.01 KiB | 0 bytes/s, done.
+Total 11 (delta 3), reused 0 (delta 0)
+To https://github.com/jiyoungkim0/myrepo.git
+   427e81d..7faf1d5  master -> master

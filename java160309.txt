@@ -1,0 +1,355 @@
+P400@G416-12 MINGW32 ~
+$
+d
+P400@G416-12 MINGW32 ~
+$
+P400@G416-12 MINGW32 ~
+$ cd Documents
+
+P400@G416-12 MINGW32 ~/Documents
+$ mkdir kjy
+
+P400@G416-12 MINGW32 ~/Documents
+$ mkdir Code
+
+P400@G416-12 MINGW32 ~/Documents
+$ cd kjy
+
+P400@G416-12 MINGW32 ~/Documents/kjy
+$ pwd
+/c/Users/P400/Documents/kjy
+
+P400@G416-12 MINGW32 ~/Documents/kjy
+$ mkdir Code
+
+P400@G416-12 MINGW32 ~/Documents/kjy
+$ cd Code
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code
+$ mkdir j16
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code
+$ cd j16
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16
+$ ls -l
+total 0
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16
+$ pwd
+/c/Users/P400/Documents/kjy/Code/j16
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16
+$ mkdir src
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16
+$ mkdir classes
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16
+$ mkdir lib
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16
+$ mkdir model
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16
+$ mkdir doc
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16
+$ rm -rf j16
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16
+$ rm -rf uni/
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16
+$ git clone https://github.com/jiyoungkim0/myrepo.git
+fatal: could not create work tree dir 'myrepo': No such file or directory
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16
+$ git clone https://github.com/jiyoungkim0/myrepo.git
+fatal: could not create work tree dir 'myrepo': No such file or directory
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16
+$ git clone https://github.com/jiyoungkim0/myrepo.git
+fatal: could not create work tree dir 'myrepo': No such file or directory
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16
+$ git clone https://github.com/jiyoungkim0/java-study.git
+fatal: could not create work tree dir 'java-study': No such file or directory
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16
+$ git clone https://github.com/jiyoungkim0/myrepo.git
+fatal: could not create work tree dir 'myrepo': No such file or directory
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16
+$ cd ..
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code
+$ git clone https://github.com/jiyoungkim0/myrepo.git
+Cloning into 'myrepo'...
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+Checking connectivity... done.
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code
+$ cd myrepo
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/myrepo (master)
+$ ls -l
+total 1
+-rw-r--r-- 1 P400 197121 8 3¢¯u   9 16:22 README.md
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/myrepo (master)
+$ ls -ls
+total 1
+1 -rw-r--r-- 1 P400 197121 8 3¢¯u   9 16:22 README.md
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/myrepo (master)
+$ mkdir classes
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/myrepo (master)
+$ mkdir j16
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/myrepo (master)
+$ ls -l
+total 1
+drwxr-xr-x 1 P400 197121 0 3¢¯u   9 16:23 classes/
+drwxr-xr-x 1 P400 197121 0 3¢¯u   9 16:23 j16/
+-rw-r--r-- 1 P400 197121 8 3¢¯u   9 16:22 README.md
+m
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/myrepo (master)
+$ my myrepo/j16
+bash: my: command not found
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/myrepo (master)
+$ mv myrepo/j16
+mv: missing destination file operand after ¢®¢çmyrepo/j16¢®?
+Try 'mv --help' for more information.
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/myrepo (master)
+$ mv myrepo/j16/
+mv: missing destination file operand after ¢®¢çmyrepo/j16/¢®?
+Try 'mv --help' for more information.
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/myrepo (master)
+$ ls -la
+total 10
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:23 ./
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:22 ../
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:22 .git/
+-rw-r--r-- 1 P400 197121 201 3¢¯u   9 16:22 .gitignore
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:23 classes/
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:23 j16/
+-rw-r--r-- 1 P400 197121   8 3¢¯u   9 16:22 README.md
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/myrepo (master)
+$ rm -rf j16/
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/myrepo (master)
+$ cd ..
+ls -l
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code
+$ ls -l
+total 4
+drwxr-xr-x 1 P400 197121 0 3¢¯u   9 16:26 myrepo/
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code
+$ ls -l
+total 4
+drwxr-xr-x 1 P400 197121 0 3¢¯u   9 16:26 myrepo/
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code
+$ mkdir j16
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code
+$ mv myrepo/ j16/
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code
+$ pwd
+/c/Users/P400/Documents/kjy/Code
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code
+$ cd j16/
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16
+$ ls -la
+total 4
+drwxr-xr-x 1 P400 197121 0 3¢¯u   9 16:26 ./
+drwxr-xr-x 1 P400 197121 0 3¢¯u   9 16:26 ../
+drwxr-xr-x 1 P400 197121 0 3¢¯u   9 16:26 myrepo/
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16
+$ cd myrepo/
+ls -la
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ ls -la
+total 10
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:26 ./
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:26 ../
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:22 .git/
+-rw-r--r-- 1 P400 197121 201 3¢¯u   9 16:22 .gitignore
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:23 classes/
+-rw-r--r-- 1 P400 197121   8 3¢¯u   9 16:22 README.md
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ pwd
+/c/Users/P400/Documents/kjy/Code/j16/myrepo
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ ls -la
+total 10
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:26 ./
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:26 ../
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:22 .git/
+-rw-r--r-- 1 P400 197121 201 3¢¯u   9 16:22 .gitignore
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:23 classes/
+-rw-r--r-- 1 P400 197121   8 3¢¯u   9 16:22 README.md
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ git log
+commit 427e81ddbc7e78fdcb417ec2eebe7ec8dd4d3e41
+Author: jiyoungkim0 <wldud2424@naver.com>
+Date:   Mon Mar 7 16:54:43 2016 +0900
+
+    Initial commit
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ mkdir src
+m
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ mkdir classes
+mkdir: cannot create directory ¢®¢çclasses¢®?: File exists
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ mkdir lib
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ mkdir model
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ mkdir doc
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ ls -la
+total 10
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:29 ./
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:26 ../
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:22 .git/
+-rw-r--r-- 1 P400 197121 201 3¢¯u   9 16:22 .gitignore
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:23 classes/
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:29 doc/
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:28 lib/
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:29 model/
+-rw-r--r-- 1 P400 197121   8 3¢¯u   9 16:22 README.md
+drwxr-xr-x 1 P400 197121   0 3¢¯u   9 16:28 src/
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ cat .gitignore
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$
+Display all 3885 possibilities? (y or n)
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ notepad.exe .gitignore
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ cat .gitignore
+lib/
+classes/
+*.png
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ git checkout -- .gitignore
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ cat .gitignore
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ cat .gitignore
+classes/
+lib/
+*.png
+*.class
+
+# Mhine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+ile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ ls -l
+total 1
+drwxr-xr-x 1 P400 197121 0 3¢¯u   9 16:23 classes/
+drwxr-xr-x 1 P400 197121 0 3¢¯u   9 16:29 doc/
+drwxr-xr-x 1 P400 197121 0 3¢¯u   9 16:28 lib/
+drwxr-xr-x 1 P400 197121 0 3¢¯u   9 16:29 model/
+-rw-r--r-- 1 P400 197121 8 3¢¯u   9 16:22 README.md
+drwxr-xr-x 1 P400 197121 0 3¢¯u   9 16:28 src/
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ ls lib/
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ echo $HOME
+/c/Users/P400
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ MV ~/Downloads/drjava-stable-20140826-r5761.jar  ./lib/
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ ls lib/
+drjava-stable-20140826-r5761.jar
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ java -jar lib/drjava-stable-20140826-r5761.jar
