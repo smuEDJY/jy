@@ -1,0 +1,55 @@
+
+지영@JYCOM MINGW64 ~
+$ pwd
+/c/Users/지영
+
+지영@JYCOM MINGW64 ~
+$ cd Documents/
+
+지영@JYCOM MINGW64 ~/Documents
+$ cd kjy
+
+지영@JYCOM MINGW64 ~/Documents/kjy
+$ cd code/
+
+지영@JYCOM MINGW64 ~/Documents/kjy/code
+$ git clone https://github.com/jiyoungkim0/160313study.git
+Cloning into '160313study'...
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+Checking connectivity... done.
+
+지영@JYCOM MINGW64 ~/Documents/kjy/code
+$ mkdir j16
+
+지영@JYCOM MINGW64 ~/Documents/kjy/code
+$ mv 160313study/ j16/
+
+지영@JYCOM MINGW64 ~/Documents/kjy/code
+$ ls -l
+total 0
+drwxr-xr-x 1 지영 197609 0 3월  13 23:01 j16/
+
+지영@JYCOM MINGW64 ~/Documents/kjy/code
+$ cd j16
+
+지영@JYCOM MINGW64 ~/Documents/kjy/code/j16
+$ cd 160313study/
+
+지영@JYCOM MINGW64 ~/Documents/kjy/code/j16/160313study (master)
+$ ls -la
+total 6
+drwxr-xr-x 1 지영 197609   0 3월  13 22:55 ./
+drwxr-xr-x 1 지영 197609   0 3월  13 23:01 ../
+drwxr-xr-x 1 지영 197609   0 3월  13 22:55 .git/
+-rw-r--r-- 1 지영 197609 201 3월  13 22:55 .gitignore
+-rw-r--r-- 1 지영 197609  13 3월  13 22:55 README.md
+ls -l
+
+지영@JYCOM MINGW64 ~/Documents/kjy/code/j16/160313study (master)
+$ ls -l
+total 1
+-rw-r--r-- 1 지영 197609 13 3월  13 22:55 README.md
+
