@@ -1,0 +1,63 @@
+package com.sd.turtle;
+
+import java.awt.Color;
+import ch.aplu.turtle.*;
+
+public class WeightTurtleMain {
+    public static void main(String[] args) {
+        WeightTurtle wt=new WeightTurtle(10);
+        System.out.println("Hello weight turtle");
+        wt.addStatusBar(30);
+        String msg="Hello I weigh "+wt.getWeight()+" kg.";
+        wt.setStatusText(msg);
+    }
+}
+
+~~~~~~~~~
+public headfirst.strategy;
+
+public abstract class Duck {
+  FlyBehavior flyBehavior;
+  QuackBehavior quackBehavior;
+  public Duck() {}
+  public void setFlyBehavior(FlyBehavior fb){
+    flyBehavior=fb;
+  }
+  public void setQuackBehavior(QuackBehavior qb) {
+    quackBehavior=qb;
+  }
+  abstract void display();
+  public void performFly() {
+    flyBehavior.fly();
+  }
+  public void performQuack() {
+    quackBehavior.quack();
+  }
+  public void swin() {
+    System.out.println("All ducks swim");
+  }
+}
+
+~~~~~~~~~~~~~~~~~~~~~~~~~`
+
+public headfirst.strategy;
+
+public class MallardDuck extends Duck {
+  public MallardDuck() {
+    quackBehavior= new Quack();
+    flyBehavior= new FlywithWings();
+  }
+  public void display() {
+    System.out.println("I am Mallard duck");
+  }
+}
+
+~~~~~~~~~~~~~~~~~~~~
+public headfirst.strategy;
+
+public interface QuackBehavior {
+  public void quck();
+}
+~~~~~~~~~~~~~~~~~~~~~
+
+

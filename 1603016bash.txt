@@ -1,0 +1,94 @@
+
+P400@G416-12 MINGW32 ~
+$ cd ~/Documents/kjy/Code/j16/myrepo/
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ javac -d classes/ -cp classes/\;lib/aplu5.jar -sourcepath src/ src/com/sd/turtle/WeightTurtle.                                                java
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ javac -d classes/ -cp classes/\;lib/aplu.5jar -sourcepath src/ src/com/sd/turtle/WeightTurtle*.java
+src\com\sd\turtle\WeightTurtle.java:8: error: package ch.aplu.turtle does not exist
+import ch.aplu.turtle.*;
+^
+src\com\sd\turtle\WeightTurtle.java:10: error: cannot find symbol
+public class WeightTurtle extends Turtle {
+                                  ^
+  symbol: class Turtle
+src\com\sd\turtle\WeightTurtleMain.java:4: error: package ch.aplu.turtle does not exist
+import ch.aplu.turtle.*;
+^
+src\com\sd\turtle\WeightTurtle.java:14: error: cannot find symbol
+        setColor(Color.red);
+        ^
+  symbol:   method setColor(Color)
+  location: class WeightTurtle
+src\com\sd\turtle\WeightTurtle.java:15: error: cannot find symbol
+        setPenColor(Color.red);
+        ^
+  symbol:   method setPenColor(Color)
+  location: class WeightTurtle
+src\com\sd\turtle\WeightTurtleMain.java:10: error: cannot find symbol
+    wt.addStatusBar(30);
+      ^
+  symbol:   method addStatusBar(int)
+  location: variable wt of type WeightTurtle
+src\com\sd\turtle\WeightTurtleMain.java:12: error: cannot find symbol
+    wt.setStatusText(msg);
+      ^
+  symbol:   method setStatusText(String)
+  location: variable wt of type WeightTurtle
+7 errors
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ javac -d classes/ -cp classes/\;lib/aplu.5jar -sourcepath src/ src/com/sd/turtle/WeightTurtle*.java
+src\com\sd\turtle\WeightTurtle.java:8: error: package ch.aplu.turtle does not exist
+import ch.aplu.turtle.*;
+^
+src\com\sd\turtle\WeightTurtle.java:10: error: cannot find symbol
+public class WeightTurtle extends Turtle {
+                                  ^
+  symbol: class Turtle
+src\com\sd\turtle\WeightTurtleMain.java:4: error: package ch.aplu.turtle does not exist
+import ch.aplu.turtle.*;
+^
+src\com\sd\turtle\WeightTurtle.java:14: error: cannot find symbol
+        setColor(Color.red);
+        ^
+  symbol:   method setColor(Color)
+  location: class WeightTurtle
+src\com\sd\turtle\WeightTurtle.java:15: error: cannot find symbol
+        setPenColor(Color.red);
+        ^
+  symbol:   method setPenColor(Color)
+  location: class WeightTurtle
+src\com\sd\turtle\WeightTurtleMain.java:10: error: cannot find symbol
+        wt.addStatusBar(30);
+          ^
+  symbol:   method addStatusBar(int)
+  location: variable wt of type WeightTurtle
+src\com\sd\turtle\WeightTurtleMain.java:12: error: cannot find symbol
+        wt.setStatusText(msg);
+          ^
+  symbol:   method setStatusText(String)
+  location: variable wt of type WeightTurtle
+7 errors
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ javac -d classes/ -cp classes/\;lib/aplu5.jar -sourcepath src/ src/com/sd/turtle/WeightTurtle*.java
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ javac -d classes/ -cp classes/ -sourcepath src/ src/headfirst/strategy/Duck.java
+src\headfirst\strategy\Duck.java:1: error: class, interface, or enum expected
+public headfirst.strategy;
+       ^
+1 error
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$ javac -d classes/ -cp classes/ -sourcepath src/ src/headfirst/strategy/MallardDuck.java
+src\headfirst\strategy\MallardDuck.java:1: error: class, interface, or enum expected
+public headfirst.strategy;
+       ^
+1 error
+
+P400@G416-12 MINGW32 ~/Documents/kjy/Code/j16/myrepo (master)
+$

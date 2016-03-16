@@ -1,0 +1,37 @@
+Welcome to DrJava.  Working directory is C:\Users\P400\Documents\kjy\Code\j16\myrepo\src
+> import ch .aplu.turtle.*;
+> Turtle t1=new Turtle();
+> t1.fd(100);
+> t1.left(90);
+> t1.fd(100);
+> t1.left(90);
+> t1.fd(100);
+> t1.left(90);
+> t1.fd(100);
+> t1.left(90);
+> t1.right(90);
+> WeightTurtle wt=new WeightTurtle(10);
+Static Error: Undefined class 'WeightTurtle'
+> import com.sd.turtle.WeightTurtle
+> WeightTurtle wt=new WeightTurtle(10);
+> wt.addStatusBar(30);
+> wt.getWeight()
+10
+> String msg="Hello I weight " + wt.getWeight() + " Kg.";
+> msg
+"Hello I weight 10 Kg."
+> wt.setStatusText(msg);
+> Turtle tOFwt=wt
+> wt=tOFwt
+Static Error: Bad types in assignment: from Turtle to WeightTurtle
+> wt=(WeightTurtle)tOFwt
+Turtle(Position=(0,0), Heading=0)
+> Turtle(Position=(0,0), Heading=0)
+> public void myPrint(Turtle t){
+  System.out.println("This is "+t);
+}
+> myPrint(t1)
+This is Turtle(Position=(0,0), Heading=-270)
+> myPrint(wt)
+This is Turtle(Position=(0,0), Heading=0)
+> 
