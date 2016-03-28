@@ -1,0 +1,24 @@
+anonymous class
+Turtle t = new Turtle()
+
+new Turtle은 이름이 없어
+
+클래스 이름을 한 번만 쓰고 또 쓸 필요가 없을 때 쓴다 > 어나니머스
+
+레프트 롸이트는 여러분이 구현하세요
+
+
+
+public class TurtleKeyObserverMain {
+  public static void main(String[] args) {
+    TurtleKeyListener t = new TurtleKeyListener();
+
+옵저버 패턴에 따라 그 이후에 해야할 일? 리스너 추가해주는 일을 해야함
+추가해주는 건 위에 생성자안에 만든 거로
+생성자 안에 만들어놔서 자동으로 추가됨
+업데이트 함수 안부름 
+
+프레임웤 > 디자인 패턴
+스윙이 프레임웤
+
+이벤트가 발생할 때 노티파이를 부르는 것을 생략할 수 있음
