@@ -1,0 +1,81 @@
+new 라는 명령어 > 객체 생성 하는 명령어
+팩토리 패턴 > new를 쓰지 말자!☆☆☆☆☆
+
+객체 생성? new를 안쓰면? 
+
+new를 쓰면 여러번 고쳐야 함 > 팩토리 쓰면 한번만 고치면 돼!
+
+getInstance ; 객체를 반환하는 함수
+
+new가 있으면 팩토리 패턴 잘 못쓴 것
+
+factory pattern in creational pattern
+
+
+class Client
+class MallardDuck
+class DecoyDuck
+Client -> MallardDuck:new()
+Client -> DecoyDuck:new()
+
+이건 OLD 방식
+
+class ConcreteProduct
+Client ->ConcreteProduct:new()
+
+이렇게 아니고
+
+Class Creator{
+  factoryMethod()
+}
+Class Product
+class ConcreteProduct
+class ConcreteProduct
+ConcreteCreator -> ConcreteProduct
+Creator <|-- ConcreteCreator
+Product <|-- ConcreteProduct
+
+이렇게!
+
+*노트 쓰는 법 (uml의 표기법)
+note right (오른쪽에 노트를 넣어라)
+hello 
+end note(막아줘야함)
+
+DIP원칙(디펜던시 인벌젼 ..)
+상속체계를 만들어서 앱스트랙트 클래스를 써라
+
+
+<클래스 다이어그램; 클래스와 관계를 나타낸것>
+class PizzaStore {
+  orderPizza()
+}
+class SimplePizzaFactory {
+  +createPizza(type:String):CheesePizza
+}
+class Pizza {
+  prepare()
+  bake()
+  cut()
+  box()
+}
+Pizza <|-- CheesePizza
+Pizza <|-- VeggiPizza
+Pizza <|-- ClamPizza
+PizzaStore -> SimplePizzaFactory
+SimplePizzaFactory -> Pizza
+
+
+<시퀀스 다이어그램; 클래스, 순서>
+화살표; 1 -> 2 ; 1이 2를 호출한다(2가 가지고 있는 함수를 호출한다.)
+
+겟인스턴스 리턴은 늘 클래스
+
+
+lazy instantiation ; 쓸 시점에서 만들어주는 것, 늦었어 미리 만들어야지
+> 쓰는 함수가 하나일때는 lazy, 여러함수에 걸치면 early
+early로 만들면 까만 다이아몬드 화살표
+early는 메모리를 잡아먹는 경향이 있지만 속도가 빠름
+lazy는 느림
+
+데코레이터는 같은 패밀리 안에서 돌아감
