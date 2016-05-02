@@ -1,0 +1,113 @@
+파일 열때 파일 오픈
+파일 닫을 때 파일 클로스
+
+엑스큐트 > 커멘드 패턴에서 쓴느 것
+
+인캡슐레이팅 인보케이션 > 함수를 하나로 통일하는 것
+
+리모콘으로 이것저것 열 수 있음
+> 차고문, 전등 오픈클로스, 온오프로 함수명이 달라
+> 1.execute로 통일
+
+
+class Client 
+class Light
+class TV
+Client -> Light:on()
+Client -> Garage:open()
+
+
+커멘드 패턴 써서 커맨드랑 인보커 새로 생김
+없으면 클라이언트랑 리시버 두개만 있지
+
+작동원리 옵저버랑 매우 비슷!
+
+함수 이름 고치지 않고 똑같이 쓰게 하는 게 어댑터 함수
+어댑터하고도 비슷
+
+먼저 등록해놓고 사용하는데 사용하는 이름이 엑스큐트라는 동일한 이름을 가지고 사용함!
+
+
+class Client
+class Invoker {
+  setCommand()
+}
+
+interface Command {
+  execute()
+}
+Command <|-- ConcreteCommand
+Client -> ConcreteCommand:new()
+Client -> Invoker:SetCommand()
+class Receiver
+
+ConcreteCommand -> Receiver
+
+
+light 는 리시버 역할
+리시버는 기존에 있었던 객체
+커맨드 패턴이랑 아무런 관련없음
+
+
+리모컨 하는 역할: 연결시켜주는 역할
+버튼 1,2 는 일반화 할 수 있음 > 어레이를 쓰면
+버튼이랑 가라지 넣어주면 포문이 돌아가기가 어려움//뭔소리?
+포문을 써주려면 커멘드로 통일을 하면
+연결시켜줄때는 일반화를 시켜줄 수 있음...ㅎ
+
+스트레티지 패턴?
+
+
+커멘드가 들어오면 버튼에 연결을 시켜 줘야해
+
+class SimpleRemoteControl {
+  -slot:Command
+  +setCommand(Command)
+  
+}
+>>버튼 하나, 심플 리모컨 버튼 여러개 하려면 어레이!
+실행이 될 때면 커멘드의 함수 엑스큐트를 불러!~
+
+
+class Light {
+  +on():void
+  +off():void
+}
+
+class GarageDoor {
+  +up():void
+  +down():void
+}
+
+Interface Command {
+    +execute():void
+}
+
+class LightOnCommand {
+  -light:Light
+  +LightOnCommand(Light)
+  +execute():void
+}
+
+Command <|.. LightOnCommand
+LightOnCommand --> Light
+
+class GargageDoorOpenCommand{
+  -garagedoor:GarageDoor
+  +GargageDoorOpenCommand(GarageDoor)
+  +execute():void
+}
+
+Command <|.. GargageDoorOpenCommand
+GargageDoorOpenCommand --> GarageDoor
+
+class SimpleRemoteControl {
+  -slot:Command
+  +setCommand(Command)
+  +buttonPressed()
+}
+SimpleRemoteControl -> Command
+Client -> SimpleRemoteControl:setCommand()
+Client -> SimpleRemoteControl:buttonPressed()
+
+
