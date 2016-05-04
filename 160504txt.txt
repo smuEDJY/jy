@@ -1,0 +1,108 @@
+커맨드라는 걸 사용해서 객체화하는 요령 배운거
+다음주에 어댑터 패턴 배우면
+유사한 점 있음
+
+어댑터 패턴은 함수가 서로 다르 ㄹ경우에
+함수를 통일하는 기능을 가지고 있음
+
+여기서도 함수 통일하는 기능을 가지고 있음
+그런 점에 있어서 어댑터 패턴고ㅏ 매우 유사
+어댑터 패턴과 다른점 있음
+
+어댑터 패턴> 아규먼트가 있어요
+
+2번째 사례는 언두!
+언두는 복잡해용
+쓰는 패턴> 메멘토 패턴(스택 사용)이라고 따로 있음
+사용했던 객체를 좀 지웠어 > 그 전의 상태로 돌아가려고 하면
+객체값들을 복원하려는 어려움이 있어요
+그 정도까지는 안하고
+방금 전에 했었던 작업을 원위치시키는 간단한 작업
+(큰 기대를 하지 말고..ㅎ ) 가벼운 언두만을 할 것!
+
+dim : 어둡게하다
+>> 언두하면 딤하는 거로 대신할게요
+딤을 누르면 언두에서 딤을 불러서 조명 낮추는 거
+
+필드가 하나 들어오면 겟셋 함수를 필드별로 만들기도 해요
+딤이 셋함수 인거
+딤.셋레벨 > 관행/ 책에서 이렇게 하니까 이렇게 해볼게요~
+
+리모콘만들기~
+리모콘 객체에서 버튼을 연결하고 객체 어레이로 연결이 된 걸 함수로 접근할 수 있게끔 리모콘 객체를 만드는 것
+온하고 오프 만들고 이걸 일일이 만들어줘야 하니까 > 클래스가 많아진다는 단점. > 사실 장점이면서 단점 > 고칠 때 쉬워~
+
+인덱스 정수 번호대로 slot이 만들어지는 거
+1번에는 전등, 2번에는 차고, 3번에는 디비디 이런거 처럼
+
+
+어레이를 써서 정상적인 리모콘 모양 만든거
+
+생성자가 하는 일 = 버튼 숫자 정해주는 일
+어레이리스트 쓰면 안해도 되는데 
+어레이썼으니까 숫자 정해줘야해
+
+리플렉션??
+
+리모콘 사용전에 라이트나, 사용할 객체들을 가져와야함
+
+Interface Command{
+  +execute():void
+  +undo():void
+}
+
+class LightOnCommand{
+  -light:Light
+  +undo():void
+}
+class Light {
+  level:int
+  +on():void
+  dim(int):void
+}
+Command <|.. LightOnCommand 
+LightOnCommand -> Light
+
+class RemoteControlWithUndo {
+  onCommands: Command[]
+  offCommands:Command[]
+  +setCommand(int, Command, Command):void
+  +onButtonWasPushed(int):void
+}
+
+RemoteControlWithUndo -> Command
+class NoCommand
+Command <|.. NoCommand
+
+Client -> Light
+Client -> RemoteControlWithUndo
+
+>>시퀀스 다이어그램 그려볼게~
+시퀀스 다이어그램 그리는 목적 ..
+클래스다이어그램에서 -> 어소시에이션
+시퀀스에서 나오는 건 클래스 정의가 안되어있어서 그래요~
+오케이 알겠져
+
+
+
+Client -> RCWU:setCommand(0,onCommand,offCommand)
+Client -> RCWU:onButtonPushed(0)
+Client -> RCWU:offButtonPushed(0)
+
+>>lighton, lightoff 로 바꾸려면
+
+Client -> RCWU:new()
+Client -> Light:light=new()
+Client -> LightOnCommand:lighton=new(light)
+Client -> LightOffCommand:lightoff=new(light)
+Client -> RCWU:setCommand(0,lighton,lightoff)
+Client -> RCWU:onButtonPushed(0)
+Client -> RCWU:offButtonPushed(0)
+
+Client -> RCWU:new()
+Client -> Light:light=new()
+Client -> LightOnCommand:lighton=new(light)
+Client -> LightOffCommand:lightoff=new(light)
+Client -> RCWU:setCommand(0,lighton,lightoff)
+Client -> RCWU:onButtonPushed(0)
+Client -> RCWU:offButtonPushed(0)
