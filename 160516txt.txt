@@ -1,0 +1,111 @@
+hotdraw framework
+
+탬플릿 > 뭔가를 미리 만들어두면 그걸 채우기만 하면 완성되는 
+ex 이력서
+뭔가 해야될 일을 상위클래스에서 정의
+하위클래스에서 빈칸을 채워나가는 것
+
+바리스타의 사례를 가지고 이해하게 될것
+티하고 커피를 만드는 것이 절차가 유사함
+> 뭔가 일치하는 탬플릿이 있음
+빈칸을 채우면 하나는 티, 하나는 커피
+
+과제; 카라멜 마끼아또 > 템플릿 패턴 사용해서
+        덕컴페러터 
+
+인캡슐레이팅 알고리즘
+알고리즘의 공통부분을 추상화
+커피 내리는 알고리즘 , 티 내리는 알고리즘 유사
+> 인캡슐레이팅 시켜서 추상화
+
+title "Before"
+
+class Coffee
+Class Tea
+Client -right-> Coffee
+Client -down-> Tea
+
+
+class Coffee {
+  prepareRecipe()
+  boilWater()
+  brewCoffeeGrinds()
+  addSugarAndMilk()
+  pourInCup()
+}
+
+class Tea {
+  prepareRecipe()
+  boilWater()
+  steepTeaBag()
+  addLemon()
+  boilWater()
+}
+
+>>>
+
+class CaffeineBeverage{
+  prepareRecipe()
+  boilWater()
+  pourInCup()
+}
+
+
+class Coffee {
+  prepareRecipe()
+  brewCoffeeGrinds()
+  addSugarAndMilk()
+}
+
+class Tea {
+  prepareRecipe()
+  steepTeaBag()
+  addLemon()
+}
+
+CaffeineBeverage <|-- Coffee
+CaffeineBeverage <|-- Tea
+
+절차(알고리즘)를 고정화(인캡슐레이팅)시키는 것
+기존의 상속과는 다름
+상속은 공통된 함수만 추상화
+여기서는 절차를 추상화> 절차가 묶여져 있는 것
+예) 하위클래스가 절차를 어기면 안돼요
+
+
+
+abstract class AbstractClass {
+  +final templateMethod():void
+  +abstract primitiveOperation1():void
+  +final concreteOperation():void
+  +hook():void
+}
+class ConcreteClass
+
+Abstract <|-- ConcreteClass
+
+>>
+절차 바꿀 수 없게 final
+나머지 함수는 abstract >나머지는 구현하게끔
+
+
+class CaffeineBeverageWithHook {
+  +final prepareRecipe():void
+  +abstract brew():void
+  +abstract addCondiments():void
+  +boilWater():void
+  +pourInCup():void
+  +customerWantsCondiments():boolean //hook 메소드
+}
+class CoffeeWithHook {
+  +brew():void
+  +addCondiments():void
+  +customerWantsCondiments():boolean
+}
+class TeaWithHook{
+  +brew():void
+  +addCondiments():void
+  +customerWantsCondiments():boolean
+}
+CaffeineBeverageWithHook <|-- CoffeeWithHook
+CaffeineBeverageWithHook <|-- TeaWithHook
